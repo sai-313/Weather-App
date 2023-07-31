@@ -1,6 +1,6 @@
 version : "3.3"
 services : 
   web :      #service_name 
-    build : .
+    image : dushyantkumark/weatherapp:latest
     ports :
       - "3000:3000"
