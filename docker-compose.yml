@@ -1,6 +1,6 @@
 version : "3.3"
 services : 
   web :      #service_name 
-    image : dushyantkumark/weatherapp:latest
+    image : saikumar313/weatherapp:latest
     ports :
       - "3000:3000"
