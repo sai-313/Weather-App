@@ -5,7 +5,7 @@ pipeline{
         stage('Copy Code'){
             steps{
                 echo "Cloning the code"
-                git url:"https://github.com/dushyantkumark/Weather-App.git", branch:"main"
+                git url:"https://github.com/sai-313/Weather-App.git", branch:"main"
             }
         }
         stage('Build'){
@@ -34,10 +34,10 @@ pipeline{
 
     post{
         success{
-            emailext attachLog: true, body: 'Email send out from Jenkins', subject: '$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!', to: 'kumardushyant545@gmail.com'
+            emailext attachLog: true, body: 'Email send out from Jenkins', subject: '$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!', to: 'v.saikumar313@gmail.com'
         }
         failure{
-            emailext attachLog: true, body: 'Email send out from Jenkins', subject: '$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!', to: 'kumardushyant545@gmail.com'
+            emailext attachLog: true, body: 'Email send out from Jenkins', subject: '$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!', to: 'v.saikumar313@gmail.com'
         }
     }    
 }
